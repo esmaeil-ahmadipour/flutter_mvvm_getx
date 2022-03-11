@@ -1,4 +1,6 @@
+import 'package:flutter_mvvm_getx/modules/main/bindings/main_binding.dart';
 import 'package:flutter_mvvm_getx/modules/splash/bindings/splash_binding.dart';
+import 'package:flutter_mvvm_getx/modules/main/views/main_screen.dart';
 import 'package:flutter_mvvm_getx/modules/splash/views/splash_screen.dart';
 import 'package:get/get.dart';
 
@@ -15,5 +17,11 @@ class AppPages {
       page: () =>  const SplashScreen(),
       binding: SplashBinding(),
     ),
+    GetPage(
+      name: _Paths.MAIN,
+      page: () =>  const MainScreen(),
+      binding: MainBinding(),
+    ),
+
   ];
 }
