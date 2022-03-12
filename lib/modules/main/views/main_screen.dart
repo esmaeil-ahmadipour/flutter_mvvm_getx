@@ -12,7 +12,17 @@ class MainScreen extends GetView<MainViewModel> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder(
-        builder: (MainViewModel controller) => const Scaffold(
-     ));
+        builder: (MainViewModel controller) => Scaffold(
+            appBar: CustomAppBar(
+              onTap: (){
+                controller.navigateToProfilePage();
+              },
+              title:"${controller.argument!.name}" ,
+                ),
+            body: controller.uiState.value.when(
+                init: () => const ShimmerListView(),
+                loading: () => const ShimmerListView(),
+                success: (data) => UserListView(data: data),
+                error: (err) => WidgetError(error: err))));
   }
 }
