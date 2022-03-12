@@ -15,8 +15,8 @@ class SplashScreen extends GetView<SplashViewModel> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  SplashTitle(title: 'app_name'.tr, padding: 16),
-                  SplashTitle(title: 'app_description'.tr, padding: 32)
+                  SplashTitle(title: 'app_name'.tr, padding: 16,color: Theme.of(context).colorScheme.onPrimary),
+                  SplashTitle(title: 'app_description'.tr, padding: 32,color: Theme.of(context).colorScheme.onPrimary,)
                 ])));
   }
 }

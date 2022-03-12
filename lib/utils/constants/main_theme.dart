@@ -23,5 +23,33 @@ abstract class MainThemes {
       primaryColor: const Color(0xff045041));
 
   // Costume Colors
-  static get colorLogo => const Color(0xff007ec5);
+  static Color colorLogo = const Color(0xff007ec5);
+  static Color colorConfirm = const Color(0xff067d3c);
+
+  // Text Widget Styled
+  static Widget textIranBold(
+      {required String string,
+        required Color color,
+        required double fontSize}) {
+    return Text(
+      string,
+      style: TextStyle(
+        fontFamily: MainValues.fontMedium,
+        color: color,
+        fontSize: fontSize,
+      ),
+      textAlign: TextAlign.right,
+      maxLines: 2,
+      overflow: TextOverflow.ellipsis,
+    );
+  }
+
+  // Text Style
+  static textStyleIranBold({required Color color, required double fontSize}) {
+    return TextStyle(
+      fontFamily: MainValues.fontMedium,
+      color: color,
+      fontSize: fontSize,
+    );
+  }
 }

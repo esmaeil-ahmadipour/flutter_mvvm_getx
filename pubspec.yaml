@@ -16,10 +16,12 @@ dependencies:
   freezed_annotation: ^1.1.0
   freezed: ^1.1.1
   shimmer:
-
+  delayed_display: ^2.0.0
 
 dev_dependencies:
   flutter_test:
+    sdk: flutter
+  flutter_driver:
     sdk: flutter
   flutter_lints: ^1.0.0
   build_runner:

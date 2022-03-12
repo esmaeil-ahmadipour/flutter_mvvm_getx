@@ -6,7 +6,7 @@ class SplashViewModel extends GetxController {
     update();
     Future.delayed(const Duration(seconds: 5), () {
     }).whenComplete(() {
-      Get.offAllNamed(Routes.MAIN);
+      Get.offAllNamed(Routes.LOGIN);
     });
   }
 
