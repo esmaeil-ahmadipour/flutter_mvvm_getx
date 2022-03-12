@@ -8,7 +8,10 @@ const Map<String, String> enUS = {
 
   // Text
   'address': 'Address: ',
+  'email_address': 'Email Address',
+  'password': 'Password',
 
   // Button
+  'confirm': 'Confirm',
 
 };

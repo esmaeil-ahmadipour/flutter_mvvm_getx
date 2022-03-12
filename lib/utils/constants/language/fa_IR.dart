@@ -8,7 +8,10 @@ const Map<String, String> faIR = {
 
   // Text
   'address': 'آدرس: ',
+  'email_address': 'آدرس ایمیل',
+  'password': 'رمز عبور',
 
   // Button
+  'confirm': 'تایید',
 
 };
