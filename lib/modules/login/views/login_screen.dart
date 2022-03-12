@@ -28,7 +28,7 @@ class LoginScreen extends GetView<LoginViewModel> {
               ),
               DelayedDisplay(
                 slidingCurve: Curves.elasticInOut,
-                delay: Duration(milliseconds: 500),
+                delay: const Duration(milliseconds: 500),
                 child: SplashTitle(
                         title: 'app_description'.tr,
                         padding: 32,
