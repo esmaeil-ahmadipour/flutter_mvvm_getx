@@ -47,7 +47,21 @@ class LoginSubmitButton extends StatelessWidget {
             iconWidget: Icon(Icons.verified,color: Theme.of(context).colorScheme.onPrimary,).paddingSymmetric(horizontal: 8.0),
                 buttonColor: MainThemes.colorConfirm,
               ),
-          error: (error) => Center(child: Text(error))),
+          error: (error) => CustomizedButton(
+            width: width,
+            height: height,
+            isActiveButton: controller.buttonState.value ? true : false,
+            onPressed: controller.buttonState.value == true
+                ? () {
+              controller.loginRequest();
+
+            }
+                : null,
+            title: 'retry'.tr,
+            fontSize: 16,
+            iconWidget: Icon(Icons.refresh,color: Theme.of(context).colorScheme.onError,).paddingSymmetric(horizontal: 8.0),
+            buttonColor: Theme.of(context).colorScheme.error,
+          )),
     );
   }
 }

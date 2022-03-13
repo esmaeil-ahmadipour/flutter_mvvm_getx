@@ -25,6 +25,7 @@ abstract class MainThemes {
   // Costume Colors
   static Color colorLogo = const Color(0xff007ec5);
   static Color colorConfirm = const Color(0xff067d3c);
+  static Color lightColorText = const Color(0xffffffff);
 
   // Text Widget Styled
   static Widget textIranBold(

@@ -3,7 +3,7 @@ import 'package:flutter_mvvm_getx/modules/main/views/widgets/shimmer_list_view.d
 import 'package:flutter_mvvm_getx/modules/main/views/widgets/user_list_tile.dart';
 import 'package:flutter_mvvm_getx/modules/main/views/widgets/widget_error.dart';
 import 'package:flutter_mvvm_getx/modules/main/view_models/main_viewModel.dart';
-import 'package:flutter_mvvm_getx/views/global_widgets/customized_appbar.dart';
+import 'package:flutter_mvvm_getx/views/global_widgets/custom_appbar/customized_appbar.dart';
 import 'package:get/get.dart';
 
 class MainScreen extends GetView<MainViewModel> {
@@ -14,10 +14,11 @@ class MainScreen extends GetView<MainViewModel> {
     return GetBuilder(
         builder: (MainViewModel controller) => Scaffold(
             appBar: CustomAppBar(
+              titleStatic: controller.argument!.name,
               onTap: (){
                 controller.navigateToProfilePage();
               },
-              title:"${controller.argument!.name}" ,
+              title:controller.uiState ,
                 ),
             body: controller.uiState.value.when(
                 init: () => const ShimmerListView(),
