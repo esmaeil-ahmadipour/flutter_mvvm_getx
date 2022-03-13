@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mvvm_getx/modules/main/views/widgets/shimmer_list_tile.dart';
+import 'package:flutter_mvvm_getx/views/global_widgets/widgets/shimmer_list_tile.dart';
 
 class ShimmerListView extends StatelessWidget {
   const ShimmerListView({

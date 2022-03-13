@@ -26,15 +26,11 @@ class LoginScreen extends GetView<LoginViewModel> {
                 padding: 16,
                 color: Theme.of(context).colorScheme.primary,
               ),
-              DelayedDisplay(
-                slidingCurve: Curves.elasticInOut,
-                delay: const Duration(milliseconds: 500),
-                child: SplashTitle(
-                        title: 'app_description'.tr,
-                        padding: 32,
-                        color: Theme.of(context).colorScheme.primary)
-                    .paddingOnly(bottom: 16.0),
-              ),
+              SplashTitle(
+                      title: 'app_description'.tr,
+                      padding: 32,
+                      color: Theme.of(context).colorScheme.primary)
+                  .paddingOnly(bottom: 16.0),
               const DelayedDisplay(
                       slidingCurve: Curves.easeInOutBack,
                       delay: Duration(milliseconds: 500),

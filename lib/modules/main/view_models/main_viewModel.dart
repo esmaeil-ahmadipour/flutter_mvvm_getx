@@ -31,8 +31,7 @@ class MainViewModel extends GetxController  {
     }
   }
   void navigateToProfilePage() {
-     print("${argument!.email}");
-    Get.toNamed(Routes.PROFILE,/* arguments:argument!*/);
+    Get.toNamed(Routes.PROFILE, arguments:argument!.guid);
   }
 
   @override
